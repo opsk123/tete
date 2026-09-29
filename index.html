@@ -3,60 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f4f6f3" />
-    <meta name="description" content="오늘 할 일을 간단하게 정리하는 체크리스트" />
-    <title>오늘의 할 일</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <meta name="theme-color" content="#f5f4fb" />
+    <meta name="description" content="오늘 할 일을 산뜻하게 정리하는 체크리스트" />
+    <title>모먼트 — 오늘의 체크리스트</title>
   </head>
   <body>
-    <main class="page-shell">
-      <section class="todo-app" aria-labelledby="page-title">
-        <header class="app-header">
-          <p class="date-label" id="today-date"></p>
-          <h1 id="page-title">오늘의 할 일</h1>
-          <p class="subtitle">작은 일부터 하나씩 해봐요.</p>
-        </header>
-
-        <form class="add-form" id="todo-form">
-          <label class="visually-hidden" for="todo-input">새 할 일</label>
-          <input
-            id="todo-input"
-            name="todo"
-            type="text"
-            placeholder="할 일을 입력하세요"
-            maxlength="120"
-            autocomplete="off"
-            required
-          />
-          <button class="add-button" type="submit">추가</button>
-        </form>
-
-        <div class="list-heading">
-          <div>
-            <h2>체크리스트</h2>
-            <p id="task-count" aria-live="polite">할 일을 추가해 보세요</p>
-          </div>
-          <div class="filters" role="group" aria-label="할 일 필터">
-            <button class="filter-button is-selected" type="button" data-filter="all" aria-pressed="true">전체</button>
-            <button class="filter-button" type="button" data-filter="active" aria-pressed="false">진행 중</button>
-            <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">완료</button>
-          </div>
-        </div>
-
-        <ul class="task-list" id="task-list" aria-label="할 일 목록"></ul>
-        <div class="empty-state" id="empty-state">
-          <span class="empty-mark" aria-hidden="true">＋</span>
-          <p id="empty-message">아직 할 일이 없어요.<br />위에서 새로운 일을 추가해 보세요.</p>
-        </div>
-
-        <footer class="app-footer">
-          <span class="progress-track" aria-hidden="true"><span id="progress-bar"></span></span>
-          <span id="progress-label">0% 완료</span>
-          <button class="clear-button" id="clear-completed" type="button" hidden>완료 항목 지우기</button>
-        </footer>
-      </section>
-      <p class="page-note">할 일은 이 브라우저에 자동으로 저장돼요.</p>
-    </main>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
